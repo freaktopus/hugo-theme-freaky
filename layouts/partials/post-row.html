@@ -1,0 +1,10 @@
+<li class="post-row">
+  {{ $external := .Params.link }}
+  <a href="{{ if $external }}{{ $external }}{{ else }}{{ .RelPermalink }}{{ end }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>
+    <div class="post-main">
+      <span class="post-title">{{ .Title }}</span>
+      <p class="post-desc">{{ .Params.description | default .Summary | truncate 100 }}</p>
+    </div>
+    <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006-01-02" }}</time>
+  </a>
+</li>

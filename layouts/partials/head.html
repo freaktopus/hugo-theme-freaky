@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Site.Params.bio }}">
+  <link rel="icon" href="{{ `favicon.svg` | relURL }}" type="image/svg+xml">
+  <link rel="shortcut icon" href="{{ `favicon.svg` | relURL }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ `favicon.svg` | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ `css/style.css` | relURL }}">
+  {{ with .Site.Params.style }}
+  <style>
+    :root {
+      {{ with .accentColor }}--accent: {{ . }};{{ end }}
+      {{ with .bgColor }}--bg: {{ . }};{{ end }}
+      {{ with .surfaceColor }}--surface: {{ . }};{{ end }}
+      {{ with .textColor }}--fg: {{ . }};{{ end }}
+      {{ with .mutedColor }}--muted: {{ . }};{{ end }}
+      {{ with .borderColor }}--border: {{ . }};{{ end }}
+    }
+  </style>
+  {{ end }}
+  {{ partial "hooks/head-end.html" . }}
+</head>

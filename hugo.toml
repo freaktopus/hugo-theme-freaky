@@ -1,0 +1,8 @@
+# Theme-level Hugo configuration.
+# Declares this directory as a Hugo module so the theme can also be
+# installed via Hugo Modules, and records supported Hugo versions.
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.120.0"

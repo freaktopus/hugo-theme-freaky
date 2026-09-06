@@ -1,0 +1,29 @@
+<header class="site-header">
+  <nav class="container nav">
+    <a href="{{ `/` | relURL }}#home" class="logo" aria-label="{{ .Site.Title }} home">
+      {{ partial "octopus.html" (dict "class" "logo-octo" "width" 22 "height" 22) }}
+      <span class="logo-text">{{ .Site.Params.handle | default .Site.Title }}</span>
+    </a>
+    <ul class="nav-links">
+      {{ if or .Site.Params.about .Site.Params.tracks }}
+      <li><a href="{{ `/` | relURL }}#about">About</a></li>
+      {{ end }}
+      {{ if gt (len (where .Site.RegularPages "Section" "projects")) 0 }}
+      <li><a href="{{ `/` | relURL }}#projects">Projects</a></li>
+      {{ end }}
+      {{ if gt (len (where .Site.RegularPages "Section" "publications")) 0 }}
+      <li><a href="{{ `/` | relURL }}#publications">Publications</a></li>
+      {{ end }}
+      {{ if gt (len (where .Site.RegularPages "Section" "articles")) 0 }}
+      <li><a href="{{ `/` | relURL }}#articles">Articles</a></li>
+      {{ end }}
+      {{ if gt (len (where .Site.RegularPages "Section" "blogs")) 0 }}
+      <li><a href="{{ `/` | relURL }}#blogs">Blogs</a></li>
+      {{ end }}
+      <li><a href="{{ `/` | relURL }}#contact">Contact</a></li>
+    </ul>
+    {{ with .Site.Params.cv }}
+    <a class="cv-btn" href="{{ . | relURL }}" target="_blank" rel="noopener">CV</a>
+    {{ end }}
+  </nav>
+</header>

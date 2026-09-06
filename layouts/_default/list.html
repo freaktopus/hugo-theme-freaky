@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="section reveal in">
+  <h1 class="section-title"><span class="accent">//</span> {{ .Title | lower }}</h1>
+  {{ if eq .Section "projects" }}
+    <div class="card-grid">
+      {{ range .Pages }}
+        {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+  {{ else }}
+    <ul class="post-list">
+      {{ range .Pages }}
+        {{ partial "post-row.html" . }}
+      {{ end }}
+    </ul>
+  {{ end }}
+</section>
+{{ end }}

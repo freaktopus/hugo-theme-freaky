@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Copyright reserved · {{ with .Site.Params.name }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }} · <span id="year">2026</span></p>
+    {{ if not .Site.Params.hideThemeCredit }}
+    <p class="theme-credit">
+      Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> ·
+      <a href="https://github.com/freaktopus/hugo-theme-freaky" target="_blank" rel="noopener">freaky</a> theme by
+      <a href="https://freaktopus.github.io/" target="_blank" rel="noopener">Sanjay Pahari</a>
+    </p>
+    {{ end }}
+  </div>
+</footer>

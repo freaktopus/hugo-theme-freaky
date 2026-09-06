@@ -1,0 +1,14 @@
+<li class="pub-row">
+  {{ $href := .Params.link | default .RelPermalink }}
+  <a href="{{ $href }}"{{ if .Params.link }} target="_blank" rel="noopener"{{ end }}>
+    <div class="pub-main">
+      <span class="pub-title">{{ .Title }}</span>
+      <p class="pub-meta">
+        {{ with .Params.authors }}<span>{{ . }}</span>{{ end }}
+        {{ with .Params.venue }}<span class="pub-venue">{{ . }}</span>{{ end }}
+      </p>
+      <p class="pub-desc">{{ .Params.description | default .Summary | truncate 110 }}</p>
+    </div>
+    <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006" }}</time>
+  </a>
+</li>

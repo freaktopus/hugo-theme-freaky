@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="post reveal in">
+  <header class="post-header">
+    <p class="post-meta"><span class="accent">~$</span> cat {{ .File.BaseFileName }}.md</p>
+    <h1>{{ .Title }}</h1>
+    <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  <p class="back"><a href="{{ `/` | relURL }}#{{ if eq .Section `projects` }}projects{{ else if eq .Section `publications` }}publications{{ else if eq .Section `blogs` }}blogs{{ else if eq .Section `articles` }}articles{{ else }}home{{ end }}">← back</a></p>
+</article>
+{{ end }}

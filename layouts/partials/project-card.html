@@ -1,0 +1,28 @@
+{{ if .Params.external_url }}
+<a href="{{ .Params.external_url }}" class="project-card" target="_blank" rel="noopener">
+{{ else }}
+<a href="{{ .RelPermalink }}" class="project-card">
+{{ end }}
+  <div class="project-logo" aria-hidden="true">
+    {{ with .Params.logo }}
+      <img src="{{ . | relURL }}" alt="">
+    {{ else }}
+      <span class="project-mark">{{ with .Params.mark }}{{ . }}{{ else }}◆{{ end }}</span>
+    {{ end }}
+  </div>
+  <div class="project-body">
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Params.description | default .Summary | truncate 90 }}</p>
+    <ul class="project-tags">
+      {{ with .Params.lang }}
+        {{ range (split . " / ") }}
+          <li>{{ . }}</li>
+        {{ end }}
+      {{ else }}
+        {{ range .Params.tags }}
+          <li>{{ . }}</li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+</a>
