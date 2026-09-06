@@ -4,7 +4,6 @@ licenselink = "https://github.com/freaktopus/hugo-theme-freaky/blob/main/LICENSE
 description = "Minimal dark single-page portfolio theme with typing animation, projects, publications, and a backend-free contact form"
 homepage = "https://github.com/freaktopus/hugo-theme-freaky"
 demosite = "https://freaktopus.github.io/"
-min_version = "0.120.0"
 tags = ["minimal", "personal", "coder", "researcher", "dark", "portfolio", "blog"]
 features = ["typing animation", "contact form", "configurable design tokens", "extension hooks", "optional site-views counter", "responsive", "no dependencies"]
 
