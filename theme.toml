@@ -1,11 +1,19 @@
 name = "freaky"
 license = "MIT"
 licenselink = "https://github.com/freaktopus/hugo-theme-freaky/blob/main/LICENSE"
-description = "Minimal dark single-page portfolio theme with typing animation, projects, publications, and a backend-free contact form"
+description = "A minimal, dark single-page portfolio theme with a typing animation, projects, publications, and an optional contact form."
 homepage = "https://github.com/freaktopus/hugo-theme-freaky"
-demosite = "https://freaktopus.github.io/"
-tags = ["minimal", "personal", "coder", "researcher", "dark", "portfolio", "blog"]
-features = ["typing animation", "contact form", "configurable design tokens", "extension hooks", "optional site-views counter", "responsive", "no dependencies"]
+demosite = "https://freaktopus.github.io/hugo-theme-freaky/"
+tags = ["minimal", "personal", "portfolio", "dark", "responsive", "blog"]
+features = [
+  "typing animation",
+  "contact form",
+  "configurable design tokens",
+  "extension hooks",
+  "optional site views counter",
+  "responsive",
+  "no dependencies"
+]
 
 [author]
   name = "Sanjay Pahari"
