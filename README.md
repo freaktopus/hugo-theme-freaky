@@ -36,7 +36,7 @@ Then set the theme in your site's `hugo.toml`:
 theme = "freaky"
 ```
 
-Copy the parameters from [`exampleSite/hugo.toml`](exampleSite/hugo.toml) into your own configuration and adapt them.
+Copy the parameters from [`exampleSite/hugo.toml`](https://github.com/freaktopus/hugo-theme-freaky/blob/main/exampleSite/hugo.toml) into your own configuration and adapt them.
 
 ## Configuration
 
